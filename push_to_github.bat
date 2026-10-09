@@ -26,9 +26,9 @@ if "%GHUSER%"=="" (
 )
 
 echo.
-echo [1/4] setting remote: git@github.com/%GHUSER%/fpga-portfolio.git
+echo [1/4] setting remote: git@github.com:%GHUSER%/fpga-portfolio.git
 "%GIT%" remote remove origin 2>nul
-"%GIT%" remote add origin git@github.com/%GHUSER%/fpga-portfolio.git
+"%GIT%" remote add origin git@github.com:%GHUSER%/fpga-portfolio.git
 if errorlevel 1 (
   echo [X] git remote add FAILED. Check the username.
   pause
