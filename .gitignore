@@ -1,0 +1,38 @@
+# ---- 仿真产物 ----
+*.vvp
+*.vcd
+*.lxt
+*.fst
+
+# ---- Vivado 工程垃圾 ----
+*.jou
+*.log
+*.str
+*.backup*
+*.debug
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+*.srcs/
+*.xpr
+*.xdc.bak
+.Xil/
+*.rpt
+*.dcp
+*.bit
+*.bin
+*.mcs
+*.ltx
+webtalk*.jou
+vivado.jou
+vivado.log
+vivado_*.str
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+*.swp
+Thumbs.db
+desktop.ini
