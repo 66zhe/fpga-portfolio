@@ -23,6 +23,23 @@ D:\iverilog\bin\vvp.exe sim.vvp
 start "" "D:\iverilog\gtkwave\bin\gtkwave.exe" wave.vcd
 ```
 
+## 自动校验（Python）
+
+不盯波形数格子，直接用脚本核对周期：
+
+```bat
+cd /d D:\fpga-portfolio\projects\01_led_blink
+python tools\vcd_period_check.py
+```
+
+`tools/vcd_period_check.py` 会解析 `wave.vcd`，把 led 每次翻转的时刻与间隔打出来，
+并断言间隔是否等于理论值 160ns：
+
+```
+[PASS] 所有间隔均为 160 ns，与 DIV=8 × 20ns 理论值一致
+       → led 完整周期 = 320 ns
+```
+
 ## 预期波形
 
 1. `rst_n` 前 100ns 为低，`cnt` 与 `led` 保持 0；
