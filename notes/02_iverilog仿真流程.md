@@ -79,3 +79,4 @@ endmodule
 | VS Code 改代码不出红线 | linter 只在 open/save 触发 | `Ctrl+S` 保存 |
 | Doctor 报 `iverilog not found` | `verilog.linting.path` 填了目录 | 该项留空 |
 | 波形一直跑不停 | testbench 少了 `$finish` | 补上 `$finish` |
+| `cd D:\xxx` 后提示符还停在 `C:\Users\...>` | **CMD 的 `cd` 只改盘内路径，不换盘符** | `cd /d D:\xxx`（或 `D: && cd \xxx`）|
