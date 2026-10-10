@@ -44,7 +44,8 @@ python tools\vcd_period_check.py
 
 1. `rst_n` 前 100ns 为低，`cnt` 与 `led` 保持 0；
 2. 100ns 后 `cnt` 从 0 递增到 7 归零，`led` 同步翻转；
-3. 测量 led 相邻两个上升沿间隔 = **320ns**。
+3. 测量 led 相邻两个上升沿间隔 = **320ns**
+   （GTKWave 实测 `Marker: B+321 ns | Base: 249 ns`，截图见 `notes/img/03_gtkwave_led_blink.png`）。
 
 > GTKWave 打开后默认空白是正常的：左侧 SST 里点 `tb_led_blink` → `u_led_blink`，
 > 下方把 `clk / rst_n / led / cnt` 双击加进去，再点 **Zoom Fit**（放大镜图标）。
